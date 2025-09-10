@@ -1,0 +1,32 @@
+package techmasters.com;
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	String choice;
+	do {
+		System.out.println("Enter the number to find their sum");
+		int num = sc.nextInt();
+	
+		int sum = 0;
+		while(num>0) {
+			sum+=num%10;
+			num/=10;
+		}
+System.out.println("sum of digits " + sum);
+sc.nextLine();
+System.out.println("Do you want to add some more: (yes/no)");
+choice=sc.nextLine().toLowerCase();
+	}while(choice.equals("yes"));
+System.out.println("program exited");
+System.out.println("see u later");
+sc.close();
+
+
+
+	}
+
+}
